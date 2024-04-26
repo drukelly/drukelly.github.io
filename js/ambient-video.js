@@ -1,3 +1,13 @@
+let throttleTimer;
+const throttle = (callback, delay) => {
+  if (throttleTimer) return;
+
+  throttleTimer = setTimeout(() => {
+    callback();
+    throttleTimer = null;
+  }, delay);
+};
+
 // Logic to draw boundaries of video elements on the page
 const isElementInViewport = (element) => {
   const rect = element.getBoundingClientRect();
@@ -35,4 +45,4 @@ window.onload = () => {
 };
 
 // Run detectElements on scroll
-window.addEventListener('scroll', detectElements, false);
+window.addEventListener('scroll', () => throttle(detectElements, 200), false);
