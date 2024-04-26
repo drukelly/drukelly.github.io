@@ -113,7 +113,6 @@ section:nth-child(3) {
   }
   section {
     padding: var(--gap) 0;
-    scroll-snap-type: y mandatory;
   }
   section > div,
   section:nth-child(odd) > div {
