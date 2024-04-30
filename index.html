@@ -36,24 +36,37 @@
 
     div {
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     h1 {
       font-size: 3em;
       margin: 0;
       padding: 0;
+      order: 2
     }
 
     p {
       border: 1px solid;
-      font-size: larger;
-      padding: .5rem;
       border-radius: 4px;
+      font-size: larger;
+      order: 3;
+      padding: .5rem;
     }
 
     a {
       color: #fa0f00;
       text-decoration: none;
+    }
+
+    img {
+      border: 1px solid #009cdc;
+      border-radius: 12px;
+      height: 64px;
+      margin: 0 auto 1em;
+      order: 1;
+      width: 64px;
     }
   </style>
 </head>
@@ -62,6 +75,7 @@
   <div>
     <h1>Hi. I'm Dru.</h1>
     <p>Currently at <a href="https://www.adobe.com/products/photoshop.html">Adobe, Inc.</a></p>
+    <img src="/img/dk-adobe-mnemonic.png" alt="Dru Kelly in Adobe mnemonic form">
   </div>
 
 </body>
