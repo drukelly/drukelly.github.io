@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Adobe Clean", sans-serif;
+}
+
+section {
+  background-color: #000;
+  border-bottom: 1px solid #2c2c2c;
+  color: #fff;
+  display: flex;
+  min-height: 700px;
+
+  &>div {
+    left: 100px;
+    position: relative;
+    top: 100px;
+    width: 560px;
+  }
+
+  & p {
+    font-size: 1.33rem;
+    line-height: 1.48;
+    margin-top: 1rem;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+h1 {
+  font: 4rem/1 "Adobe Clean Black", sans-serif;
+  text-transform: uppercase;
+
+  & span {
+    display: block;
+    color: transparent;
+
+    &:nth-child(1) {
+      background: linear-gradient(75deg, rgba(229, 53, 35, 1) 0%, rgba(239, 222, 76, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(71deg, rgba(219, 53, 36, 1) 0%, rgba(213, 107, 119, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(67deg, rgba(224, 61, 115, 1) 0%, rgba(173, 102, 245, 1) 49%, rgba(94, 199, 148, 1) 75%, rgba(83, 132, 239, 1) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+}
+
+nav {
+  bottom: 24px;
+  font-size: .88rem;
+  position: fixed;
+  right: 24px;
+
+  button {
+    cursor: pointer;
+    line-height: 1;
+    outline: none;
+    padding: .25rem;
+    text-decoration: none;
+    
+    &.active {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

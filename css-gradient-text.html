@@ -6,65 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
   <title>Dru Kelly: CSS Gradient Text</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Adobe Clean", sans-serif;
-    }
-
-    section {
-      background-color: #000;
-      border-bottom: 1px solid #2c2c2c;
-      color: #fff;
-      display: flex;
-      min-height: 700px;
-
-      &>div {
-        left: 100px;
-        position: relative;
-        top: 100px;
-        width: 560px;
-      }
-
-      & p {
-        font-size: 1.33rem;
-        line-height: 1.48;
-        margin-top: 1rem;
-      }
-    }
-
-    h1 {
-      font: 4rem/1 "Adobe Clean Black", sans-serif;
-      text-transform: uppercase;
-
-      & span {
-        display: block;
-        color: transparent;
-
-        &:nth-child(1) {
-          background: linear-gradient(75deg, rgba(229, 53, 35, 1) 0%, rgba(239, 222, 76, 1) 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
-
-        &:nth-child(2) {
-          background: linear-gradient(71deg, rgba(219, 53, 36, 1) 0%, rgba(213, 107, 119, 1) 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
-
-        &:nth-child(3) {
-          background: linear-gradient(67deg, rgba(224, 61, 115, 1) 0%, rgba(173, 102, 245, 1) 49%, rgba(94, 199, 148, 1) 75%, rgba(83, 132, 239, 1) 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/css-gradient-text.css">
 </head>
 
 <body>
@@ -75,26 +17,51 @@
         started.</p>
     </div>
   </section>
-  <section lang="de-DE">
+  <section lang="de-DE" class="hidden">
     <div>
       <h1><span>Jeder</span> <span>kann.</span> <span>Photoshop</span></h1>
       <p>Mit den neuen generativen KI-Funktionen in Photoshop kannst du von Text zu Bildern gelangen. Ein einfacher
         Textvorschlag genügt, um loszulegen.</p>
     </div>
   </section>
-  <section lang="es-ES">
+  <section lang="es-ES" class="hidden">
     <div>
       <h1><span>Todos</span> <span>pueden.</span> <span>Photoshop</span></h1>
       <p>Convierte texto en imágenes usando las nuevas características generativas de inteligencia artificial en
         Photoshop. Un simple texto de inicio es todo lo que necesitas.</p>
     </div>
   </section>
-  <section lang="ja-JA">
+  <section lang="ja-JA" class="hidden">
     <div>
       <h1><span>みんな"</span> <span>できる.</span> <span>Photoshop</span></h1>
       <p>テキストから画像に変換するために、Photoshopの新しい生成AI機能を利用してください。シンプルなテキストのプロンプトが全ての始まりになります。</p>
     </div>
   </section>
+  <nav>
+    Available languages: <button lang="en" class="active">English</button> <button lang="de-DE">Deutsch</button>
+    <button lang="es-ES">Español</button> <button lang="ja-JA">日本語</button>
+  </nav>
+  <script>
+    const buttons = document.querySelectorAll('button');
+    const sections = document.querySelectorAll('section');
+
+    let activeButton = buttons[0];
+    let activeSection = document.querySelector(`section[lang="${activeButton.lang}"]`);
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        activeButton.classList.remove('active');
+        activeSection.classList.add('hidden');
+
+        button.classList.add('active');
+        const newSection = document.querySelector(`section[lang="${button.lang}"]`);
+        newSection.classList.remove('hidden');
+
+        activeButton = button;
+        activeSection = newSection;
+      });
+    });
+  </script>
 </body>
 
 </html>
