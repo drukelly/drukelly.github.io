@@ -1,0 +1,43 @@
+* {
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+body {
+  font: 18px/1 "Adobe Clean", Arial, sans-serif;
+  overflow-y: hidden;
+}
+
+form {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "a b"
+    "c d";
+}
+
+fieldset {
+  border: 1px solid;
+  border-collapse: separate;
+}
+
+input {
+  font: 100 4em/1 "Adobe Clean", Arial, sans-serif;
+  height: 50vh;
+  padding: 1em;
+}
+
+.a { grid-area: a; }
+
+.b { grid-area: b; }
+
+.c { grid-area: c; }
+
+.d { grid-area: d; }
