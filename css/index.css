@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Aptos Display', sans-serif;
+  font-size: var(--font-size-base);
+  justify-content: center;
+  line-height: var(--line-height-normal);
+  min-height: 100vh;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+h1, h2, h3 {
+  color: var(--color-dark-green);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+em {
+  font-size: var(--font-size-sm);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+}
+
+.css-grid-container {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 16px;
+
+  & .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & a.button,
+    & button,
+    & .social-links {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+  }
+}
+
+.grid-item {
+  background-color: #f1f1f1;
+  border: 1px solid var(--color-dark-brown);
+  border-radius: 6px;
+  min-height: 285px;
+  padding: 24px 20px;
+
+  & button,
+  & a.button {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 2px solid black;
+    color: inherit;
+    cursor: pointer;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      border-color: var(--color-dark);
+    }
+  }
+}
+
+.about {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  position: relative;
+  
+  & p {
+    margin-right: 160px;
+  }
+
+  & img {
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    width: 220px;
+    object-fit: cover;
+  }
+}
+
+.project-1 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 3;
+}
+
+.project-2 {
+  grid-row: span 4 / span 4;
+  grid-column-start: 4;
+}
+
+.some-fun-stuff {
+  grid-row: span 4 / span 4;
+  grid-row-start: 4;
+}
+
+.learnings {
+  grid-row: span 4 / span 4;
+  grid-row-start: 4;
+}
+
+.socials {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 5;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+
+  & li {
+    display: inline-block;
+
+    & a {
+      background: no-repeat center;
+      background-size: contain;
+      display: block;
+      height: var(--icon-size);
+      width: var(--icon-size);
+      text-indent: -9999px;
+
+      &:hover {
+        opacity: 0.44;
+      }
+    }
+  }
+
+  & .social-link--linkedin a {
+    background-image: var(--icon-linkedin);
+  }
+
+  & .social-link--instagram a {
+    background-image: var(--icon-instagram);
+  }
+
+  & .social-link--x a {
+    background-image: var(--icon-x);
+  }
+}
+
+/* Tablet Responsive Grid */
+@media (max-width: 1024px) {
+  body {
+    margin: 0 auto;
+    max-width: 840px;
+  }
+
+  .css-grid-container {
+    gap: 12px;
+  }
+}
+
+/* Mobile Responsive Grid */
+@media (max-width: 667px) {
+  .css-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 24px;
+    padding: 16px;
+  }
+
+  .grid-item {
+    min-height: auto;
+    height: auto;
+    padding: 20px 16px;
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  hgroup + p {
+    margin-bottom: 1rem;
+  }
+
+  .about {
+    padding-bottom: 77px;
+    & p {
+      margin-right: 0;
+    }
+
+    & img {
+      max-width: 140px;
+      display: block;
+    }
+  }
+
+  .project-1 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .project-2 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .some-fun-stuff {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .learnings {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .socials {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

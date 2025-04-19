@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{% block title %} - Dru Kelly{% endblock %}</title>
+  <meta name="description"
+    content="Dru Kelly, father to his awesome kids, husband to his lovely wife, currently a Sr. Global Web Producer at Adobe, Inc.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111812;
+        color: #f1f1f1;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: #f1f1f1;
+        color: #111812;
+      }
+    }
+
+    body {
+      align-items: center;
+      display: flex;
+      font-family: 'Adobe Clean', Arial, sans-serif;
+      height: 100dvh;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      padding: 0;
+      order: 2
+    }
+
+    p {
+      border: 1px solid;
+      border-radius: 4px;
+      font-size: larger;
+      order: 3;
+      padding: .5rem;
+    }
+
+    a {
+      color: #fa0f00;
+      text-decoration: none;
+    }
+
+    img {
+      border: 1px solid #009cdc;
+      border-radius: 12px;
+      height: 64px;
+      margin: 0 auto 1em;
+      order: 1;
+      width: 64px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Hi. I'm Dru.</h1>
+    <p>Currently at <a href="https://www.adobe.com/products/photoshop.html">Adobe, Inc.</a></p>
+    <img src="/img/dk-adobe-mnemonic.png" alt="Dru Kelly in Adobe mnemonic form">
+  </div>
+
+  <main>
+    {{ content|safe }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ year }} Dru Kelly. All rights reserved.</p>
+  </footer>
+
+</body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-8V7LBDDE0S');
+</script>
+
+</html>

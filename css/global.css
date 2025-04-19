@@ -1,0 +1,37 @@
+:root {
+    /* Colors */
+    --color-light: rgb(239, 229, 209);
+    --color-dark: rgb(51, 64, 75);
+    --color-brown: rgb(183, 137, 84);
+    --color-dark-brown: rgba(130, 107, 91, 0.33);
+    --color-dark-green: rgb(1, 101, 80);
+    --color-hyperlink: rgb(59, 99, 249);
+    --color-hyperlink-hover: rgb(46, 84, 221);
+    
+    /* Social media icon paths */
+    --icon-linkedin: url('/img/linkedin.svg');
+    --icon-instagram: url('/img/instagram.svg');
+    --icon-x: url('/img/x.svg');
+
+    /* Social icon dimensions */
+    --icon-size: 32px;
+}
+
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+a {
+    color: var(--color-hyperlink);
+    
+    &:hover {
+        color: var(--color-hyperlink-hover);
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}

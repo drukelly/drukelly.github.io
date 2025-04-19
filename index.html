@@ -4,89 +4,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
   <title>Dru Kelly</title>
   <meta name="description"
     content="Dru Kelly, father to his awesome kids, husband to his lovely wife, currently a Sr. Global Web Producer at Adobe, Inc.">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <style>
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #111812;
-        color: #f1f1f1;
-      }
-    }
-
-    @media (prefers-color-scheme: light) {
-      body {
-        background-color: #f1f1f1;
-        color: #111812;
-      }
-    }
-
-    body {
-      align-items: center;
-      display: flex;
-      font-family: 'Adobe Clean', Arial, sans-serif;
-      height: 100dvh;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    div {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0;
-      padding: 0;
-      order: 2
-    }
-
-    p {
-      border: 1px solid;
-      border-radius: 4px;
-      font-size: larger;
-      order: 3;
-      padding: .5rem;
-    }
-
-    a {
-      color: #fa0f00;
-      text-decoration: none;
-    }
-
-    img {
-      border: 1px solid #009cdc;
-      border-radius: 12px;
-      height: 64px;
-      margin: 0 auto 1em;
-      order: 1;
-      width: 64px;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/type.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
-  <div>
-    <h1>Hi. I'm Dru.</h1>
-    <p>Currently at <a href="https://www.adobe.com/products/photoshop.html">Adobe, Inc.</a></p>
-    <img src="/img/dk-adobe-mnemonic.png" alt="Dru Kelly in Adobe mnemonic form">
+  <div class="css-grid-container">
+    <div class="grid-item about">
+      <img src="/img/dk-at-pier-7-sf.png" alt="Dru Kelly with Studio Ghibli inspired image" />
+      <hgroup>
+        <h1>Hi, I'm Dru.</h1>
+        <em>About Me</em>
+      </hgroup>
+      <p>A person with an enthusiasm creating and building for the web. I'm currently working at <a href="https://www.adobe.com">Adobe</a> as a Senior Global Web Producer. I'm also a father of two and a husband to my lovely wife.</p>
+      <button class="button" id="confetti-button">Yay!</button>
+    </div>
+    <div class="grid-item project-1">
+      <hgroup>
+        <h3>Adobe Photoshop on adobe.com</h3>
+        <em>Projects I'm working on</em>
+      </hgroup>
+      <p>I manage the Adobe Photoshop product and its <a href="https://www.adobe.com/products/photoshop/features.html" target="_blank">related pages</a> on adobe.com</a>. Check out the work first hand.</p>
+      <a href="https://www.adobe.com/products/photoshop.html?target=off" class="button" aria-label="Open Photoshop on adobe.com" target="_blank">Open Ps on adobe.com</a>
+    </div>
+    <div class="grid-item project-2">
+      <hgroup>
+        <h3>Dashcam Video Compiler</h3>
+        <em>Side project</em>
+      </hgroup>
+      <p>A Python script that creates a compilation video by extracting and combining random clips from multiple MP4 files.</p>
+      <a href="https://github.com/drukelly/dashcam-video-compiler" class="button" aria-label="Dashcam Video Compiler project on Github" target="_blank">Github Project</a>
+    </div>
+    <div class="grid-item some-fun-stuff">
+      <hgroup>
+        <h3>Photography</h3>
+        <em>Hobby of the moment</em>
+      </hgroup>
+      <p>I'm also a self-taught photographer. Here are some of my favorite photos.</p>
+      <a href="https://vsco.co/drukelly/gallery" aria-label="Check out my VSCO gallery" class="button">VSCO Gallery</a>
+    </div>
+    <div class="grid-item learnings">
+      <hgroup>
+        <h3>Coming soon...</h3>
+        <em>Blog</em>
+      </hgroup>
+      <p>No blog posts yet. Check back soon!</p>
+      <!-- <button class="button">Blog</button> -->
+    </div>
+    <div class="grid-item socials">
+      <hgroup>
+        <h3>Let's Connect!</h3>
+        <em>Somewhat Anti-Social but adapting to our social world</em>
+      </hgroup>
+      <p>I rarely post on social media. However, if you'd like to get in touch, feel free to connect!</p>
+      <ul class="social-links">
+        <li class="social-link--instagram"><a href="https://www.instagram.com/drukelly_/">Instagram</a></li>
+        <li class="social-link--linkedin"><a href="https://www.linkedin.com/in/drukelly/">LinkedIn</a></li>
+        <li class="social-link--x"><a href="https://www.x.com/drukelly/">X</a></li>
+      </ul>
+    </div>
   </div>
 
+  <div>
+  </div>
+
+  <script src="/js/confetti.min.js"></script>
+  <script>
+    const confetti = new Confetti('confetti-button');
+    confetti.setCount(100);
+    confetti.setSize(1);
+    confetti.setPower(25);
+    confetti.setSpeed(1);
+    confetti.setFade(true);
+    confetti.setDecay(0.94);
+    confetti.setScalar(1.2);
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  
+    gtag('config', 'G-8V7LBDDE0S');
+  </script>
 </body>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-
-  gtag('config', 'G-8V7LBDDE0S');
-</script>
-
 </html>
