@@ -16,82 +16,101 @@
 <body>
   <div class="css-grid-container">
     <div class="grid-item about">
-      <img src="/img/dk-at-pier-7-sf.png" alt="Dru Kelly with Studio Ghibli inspired image" />
-      <hgroup>
-        <h1>Hi, I'm Dru.</h1>
-        <em>About Me</em>
-      </hgroup>
-      <p>A person with an enthusiasm creating and building for the web. I'm currently working at <a href="https://www.adobe.com">Adobe</a> as a Senior Global Web Producer. I'm also a father of two and a husband to my lovely wife.</p>
-      <button class="button" id="confetti-button">Yay!</button>
+      <div class="inner-grid-item">
+        <img src="/img/dk-at-pier-7-sf.png" alt="Dru Kelly with Studio Ghibli inspired image" />
+        <hgroup>
+          <h1>Hi, I'm Dru.</h1>
+          <em>About Me</em>
+        </hgroup>
+        <p>A person with an enthusiasm creating and building for the web. I'm currently working at <a
+            href="https://www.adobe.com">Adobe</a> as a Senior Global Web Producer. I'm also a father of two and a
+          husband to my lovely wife.</p>
+        <button class="button" id="confetti-button">Yay!</button>
+      </div>
     </div>
     <div class="grid-item project-1">
-      <hgroup>
-        <h3>Adobe Photoshop on adobe.com</h3>
-        <em>Projects I'm working on</em>
-      </hgroup>
-      <p>I manage the Adobe Photoshop product and its <a href="https://www.adobe.com/products/photoshop/features.html" target="_blank">related pages</a> on adobe.com</a>. Check out the work first hand.</p>
-      <a href="https://www.adobe.com/products/photoshop.html?target=off" class="button" aria-label="Open Photoshop on adobe.com" target="_blank">Open Ps on adobe.com</a>
+      <div class="inner-grid-item">
+        <hgroup>
+          <h3>Adobe Photoshop on adobe.com</h3>
+          <em>Projects I'm working on</em>
+        </hgroup>
+        <p>I manage the Adobe Photoshop product and its <a href="https://www.adobe.com/products/photoshop/features.html"
+            target="_blank">related pages</a> on adobe.com</a>. Check out the work first hand.</p>
+        <a href="https://www.adobe.com/products/photoshop.html?target=off" class="button"
+          aria-label="Open Photoshop on adobe.com" target="_blank">Open Ps on adobe.com</a>
+      </div>
     </div>
     <div class="grid-item project-2">
-      <hgroup>
-        <h3>Dashcam Video Compiler</h3>
-        <em>Side project</em>
-      </hgroup>
-      <p>A Python script that creates a compilation video by extracting and combining random clips from multiple MP4 files.</p>
-      <a href="https://github.com/drukelly/dashcam-video-compiler" class="button" aria-label="Dashcam Video Compiler project on Github" target="_blank">Github Project</a>
+      <div class="inner-grid-item">
+        <hgroup>
+          <h3>Dashcam Video Compiler</h3>
+          <em>Side project</em>
+        </hgroup>
+        <p>A Python script that creates a compilation video by extracting and combining random clips from multiple MP4
+          files.</p>
+        <a href="https://github.com/drukelly/dashcam-video-compiler" class="button"
+          aria-label="Dashcam Video Compiler project on Github" target="_blank">Github Project</a>
+      </div>
     </div>
     <div class="grid-item some-fun-stuff">
-      <hgroup>
-        <h3>Photography</h3>
-        <em>Hobby of the moment</em>
-      </hgroup>
-      <p>I'm also a self-taught photographer. Here are some of my favorite photos.</p>
-      <a href="https://vsco.co/drukelly/gallery" aria-label="Check out my VSCO gallery" class="button">VSCO Gallery</a>
+      <div class="inner-grid-item">
+        <hgroup>
+          <h3>Photography</h3>
+          <em>Hobby of the moment</em>
+        </hgroup>
+        <p>I'm also a self-taught photographer. Here are some of my favorite photos.</p>
+        <a href="https://vsco.co/drukelly/gallery" aria-label="Check out my VSCO gallery" class="button">VSCO
+          Gallery</a>
+      </div>
     </div>
     <div class="grid-item learnings">
-      <hgroup>
-        <h3>Coming soon...</h3>
-        <em>Blog</em>
-      </hgroup>
-      <p>No blog posts yet. Check back soon!</p>
-      <!-- <button class="button">Blog</button> -->
+      <div class="inner-grid-item">
+        <hgroup>
+          <h3>Coming soon...</h3>
+          <em>Blog</em>
+        </hgroup>
+        <p class="no-button">No blog posts yet. Check back soon!</p>
+        <!-- <button class="button">Blog</button> -->
+      </div>
     </div>
     <div class="grid-item socials">
-      <hgroup>
-        <h3>Let's Connect!</h3>
-        <em>Somewhat Anti-Social but adapting to our social world</em>
-      </hgroup>
-      <p>I rarely post on social media. However, if you'd like to get in touch, feel free to connect!</p>
-      <ul class="social-links">
-        <li class="social-link--instagram"><a href="https://www.instagram.com/drukelly_/">Instagram</a></li>
-        <li class="social-link--linkedin"><a href="https://www.linkedin.com/in/drukelly/">LinkedIn</a></li>
-        <li class="social-link--x"><a href="https://www.x.com/drukelly/">X</a></li>
-      </ul>
+      <div class="inner-grid-item">
+        <hgroup>
+          <h3>Let's Connect!</h3>
+          <em>Somewhat Anti-Social but adapting to our social world</em>
+        </hgroup>
+        <p>I rarely post on social media. However, if you'd like to get in touch, feel free to connect!</p>
+        <ul class="social-links">
+          <li class="social-link--instagram"><a href="https://www.instagram.com/drukelly_/">Instagram</a></li>
+          <li class="social-link--linkedin"><a href="https://www.linkedin.com/in/drukelly/">LinkedIn</a></li>
+          <li class="social-link--x"><a href="https://www.x.com/drukelly/">X</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+    <footer>
+      <small>&copy; 2025 Dru Kelly. All rights reserved.</small>
+    </footer>
 
-  <div>
-  </div>
+    <script src="/js/confetti.min.js"></script>
+    <script>
+      const confetti = new Confetti('confetti-button');
+      confetti.setCount(100);
+      confetti.setSize(1);
+      confetti.setPower(25);
+      confetti.setSpeed(1);
+      confetti.setFade(true);
+      confetti.setDecay(0.94);
+      confetti.setScalar(1.2);
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-  <script src="/js/confetti.min.js"></script>
-  <script>
-    const confetti = new Confetti('confetti-button');
-    confetti.setCount(100);
-    confetti.setSize(1);
-    confetti.setPower(25);
-    confetti.setSpeed(1);
-    confetti.setFade(true);
-    confetti.setDecay(0.94);
-    confetti.setScalar(1.2);
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-  
-    gtag('config', 'G-8V7LBDDE0S');
-  </script>
+      gtag('config', 'G-8V7LBDDE0S');
+    </script>
 </body>
+
 </html>

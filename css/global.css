@@ -1,6 +1,6 @@
 :root {
     /* Colors */
-    --color-light: rgb(239, 229, 209);
+    --color-light: rgb(241, 241, 241);
     --color-dark: rgb(51, 64, 75);
     --color-brown: rgb(183, 137, 84);
     --color-dark-brown: rgba(130, 107, 91, 0.33);
@@ -15,6 +15,14 @@
 
     /* Social icon dimensions */
     --icon-size: 32px;
+
+    /* Button padding */
+    --padding-button: 6px 12px;
+
+    /* Border radius for grid items */
+    --outer-radius: 2em;
+    --padding: 1em;
+    --inner-radius: calc(var(--outer-radius) - var(--padding));
 }
 
 body {

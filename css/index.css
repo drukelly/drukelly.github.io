@@ -6,6 +6,7 @@
 
 body {
   align-items: center;
+  background: linear-gradient(45deg, #e3ffe7 0%, #d9e7ff 100%);
   display: flex;
   flex-direction: column;
   font-family: 'Aptos Display', sans-serif;
@@ -18,10 +19,6 @@ body {
 hgroup {
   display: flex;
   flex-direction: column-reverse;
-}
-
-h1, h2, h3 {
-  color: var(--color-dark-green);
 }
 
 h1 {
@@ -57,14 +54,14 @@ p {
 
 .css-grid-container {
   display: grid;
-  gap: 32px;
+  gap: var(--padding);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(7, 1fr);
   margin: 0 auto;
   max-width: 1200px;
-  padding: 16px;
+  padding: var(--padding);
 
-  & .grid-item {
+  & .inner-grid-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,11 +76,23 @@ p {
 }
 
 .grid-item {
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid var(--color-dark-brown);
-  border-radius: 6px;
+  border-radius: var(--outer-radius);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: var(--padding);
+}
+
+.inner-grid-item {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--color-dark-brown);
+  border-radius: var(--inner-radius);
   min-height: 285px;
-  padding: 24px 20px;
+  padding: calc(var(--padding) * 1.618);
+  width: 100%;
 
   & button,
   & a.button {
@@ -94,7 +103,7 @@ p {
     cursor: pointer;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
-    padding: 6px 12px;
+    padding: var(--padding-button);
     transition: background-color 0.3s ease;
     text-decoration: none;
 
@@ -117,10 +126,9 @@ p {
 
   & img {
     position: absolute;
-    bottom: 0;
-    right: 16px;
+    bottom: var(--padding);
+    right: calc(var(--padding) + 16px);
     width: 220px;
-    object-fit: cover;
   }
 }
 
@@ -187,6 +195,11 @@ p {
   }
 }
 
+footer {
+  color: rgba(0, 0, 0, 0.67);
+  padding-left: var(--padding);
+}
+
 /* Tablet Responsive Grid */
 @media (max-width: 1024px) {
   body {
@@ -194,64 +207,68 @@ p {
     max-width: 840px;
   }
 
+  /* For tablet, change the grid to 2 x 3, with all the grid-items having the same height */
   .css-grid-container {
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .grid-item {
+    grid-column: span 1 / span 1; 
+    grid-row: span 1 / span 1;
+  }
+
+  .about {
+    p {
+      margin-right: 0px;
+      padding-bottom: 80px;
+    }
+    img {
+      max-width: 150px;
+    }
   }
 }
 
-/* Mobile Responsive Grid */
+/* Phone Responsive Grid */
 @media (max-width: 667px) {
   .css-grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 24px;
-    padding: 16px;
   }
 
-  .grid-item {
+  .inner-grid-item {
     min-height: auto;
     height: auto;
-    padding: 20px 16px;
     grid-column: 1;
     grid-row: auto;
   }
-
   hgroup + p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .no-button {
+    margin-bottom: 0;
   }
 
   .about {
-    padding-bottom: 77px;
-    & p {
+    p {
       margin-right: 0;
+      padding-bottom: 70px;
     }
-
     & img {
-      max-width: 140px;
       display: block;
+      left: 50%;
+      left: 50%;
+      max-width: 140px;
+      right: 0;
+      transform: translateX(-50%);
     }
   }
 
-  .project-1 {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .project-2 {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .some-fun-stuff {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .learnings {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
+  .project-1,
+  .project-2,
+  .some-fun-stuff,
+  .learnings,
   .socials {
     grid-column: 1;
     grid-row: auto;

@@ -1,6 +1,6 @@
 :root {
     /* Base font size */
-    --font-size-base: 13px;
+    --font-size-base: 12px;
 
     /* Scale using a ratio of 1.25 (major third) */
     --font-size-sm: calc(var(--font-size-base) * 0.8);
