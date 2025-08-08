@@ -202,6 +202,10 @@ main {
   & .social-link--x a {
     background-image: var(--icon-x);
   }
+
+  & .social-link--github a {
+    background-image: var(--icon-github);
+  }
 }
 
 footer {
