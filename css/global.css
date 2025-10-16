@@ -3,7 +3,7 @@
     --color-light: rgb(241, 241, 241);
     --color-dark: rgb(51, 64, 75);
     --color-brown: rgb(183, 137, 84);
-    --color-dark-brown: rgba(130, 107, 91, 0.33);
+    --color-dark-brown: rgba(130, 107, 91, 0.13);
     --color-dark-green: rgb(1, 101, 80);
     --color-hyperlink: rgb(59, 99, 249);
     --color-hyperlink-hover: rgb(46, 84, 221);
@@ -23,6 +23,10 @@
     --outer-radius: 2em;
     --padding: 1em;
     --inner-radius: calc(var(--outer-radius) - var(--padding));
+}
+
+html {
+    height: 100%;
 }
 
 body {

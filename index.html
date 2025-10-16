@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Dru Kelly</title>
   <meta name="description"
     content="Dru Kelly, father to his awesome kids, husband to his lovely wife, currently a Sr. Global Web Producer at Adobe, Inc.">
@@ -17,7 +17,7 @@
   <div class="css-grid-container">
     <header class="grid-item about">
       <div class="inner-grid-item">
-        <img src="/img/dk-at-pier-7-sf.png" alt="Dru Kelly with Studio Ghibli inspired image" />
+        <img src="/img/dk-at-pier-7-sf.webp" alt="Dru Kelly with Studio Ghibli inspired image" />
         <hgroup>
           <h1>Hi, I'm Dru.</h1>
           <em>The Short Version</em>
@@ -58,11 +58,11 @@
       <div class="grid-item some-fun-stuff">
         <div class="inner-grid-item">
           <hgroup>
-            <h2>Formula 1</h2>
-            <em>Currently obsessed with</em>
+            <h2>Adobe MAX</h2>
+            <em>I'm going to MAX this year!</em>
           </hgroup>
-          <p>The <a href="https://www.imdb.com/title/tt16311594/">movie</a> piqued my interest. I'll admit, <a href="https://www.imdb.com/title/tt8289930/">Drive to Survive</a> made me a fan.</p>
-          <a href="https://www.formula1.com" aria-label="Tu-tu-du, Max Verstappen!" class="button">Go McLaren/Ferrari/Red Bull!</a>
+          <p>I'm hoping for another <a href="https://www.youtube.com/watch?v=yJgKVLweDJk" target="_blank">"shout it aloud, Creative Cloud"</a> moment. And if you're going to MAX in LA on Oct 26-30, let's connect!</p>
+          <a href="https://max.adobe.com" class="button" aria-label="Adobe MAX website" target="_blank">Adobe MAX</a>
         </div>
       </div>
 
@@ -94,33 +94,17 @@
 
       <!-- Scripts and canvas moved inside main -->
       <div class="grid-item" style="display: none;">
-        <script src="/js/confetti.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
         <script>
-          const confetti = new Confetti('confetti-button');
-          confetti.setCount(100);
-          confetti.setSize(1);
-          confetti.setPower(25);
-          confetti.setSpeed(1);
-          confetti.setFade(true);
-          confetti.setDecay(0.94);
-          confetti.setScalar(1.2);
-
-          // Add aria-hidden to the canvas when it's created
-          const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-              if (mutation.addedNodes) {
-                mutation.addedNodes.forEach((node) => {
-                  if (node.nodeName === 'CANVAS') {
-                    node.setAttribute('aria-hidden', 'true');
-                  }
-                });
-              }
+          document.getElementById('confetti-button').addEventListener('click', function() {
+            confetti({
+              particleCount: 100,
+              spread: 70,
+              origin: { y: 0.6 },
+              startVelocity: 25,
+              decay: 0.94,
+              scalar: 1.2
             });
-          });
-
-          observer.observe(document.body, {
-            childList: true,
-            subtree: true
           });
         </script>
         <!-- Google tag (gtag.js) -->
