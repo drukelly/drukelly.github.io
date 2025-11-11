@@ -1,6 +1,8 @@
 {
   "project": "Dru Kelly",
   "host": "drukelly.github.io",
+  "previewHost": "aem-franklin-migration--drukelly-github-io--drukelly.aem.page",
+  "liveHost": "drukelly.github.io",
   "plugins": [
     {
       "id": "tools",
