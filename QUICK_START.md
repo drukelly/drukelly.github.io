@@ -38,17 +38,28 @@ A person with an enthusiasm creating and building for the web.
 
 ## Step 4: Preview (1 minute)
 
-Open: https://main--drukelly-github-io--drukelly.hlx.page/
-
-You should see your content!
-
-## Step 5: Push AEM Files to GitHub (2 minutes)
-
-```bash
-git add .
-git commit -m "Add AEM Franklin structure"
-git push origin main
+**Branch Preview URL:**
 ```
+https://aem-franklin-migration--drukelly-github-io--drukelly.hlx.page/
+```
+
+**Main Site (unchanged):**
+```
+https://main--drukelly-github-io--drukelly.hlx.page/
+```
+
+You should see your new content on the branch URL!
+
+## Step 5: Push Changes (Already Done! ✅)
+
+Your AEM Franklin files are already committed to the `aem-franklin-migration` branch and pushed to GitHub.
+
+**Branch Preview URL:**
+```
+https://aem-franklin-migration--drukelly-github-io--drukelly.hlx.page/
+```
+
+> 💡 **Smart move using a branch!** This keeps your production site safe while testing.
 
 ## That's It! 🎉
 
