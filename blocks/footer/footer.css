@@ -1,0 +1,38 @@
+/* Footer Block */
+footer {
+  background-color: #111812;
+  color: #f1f1f1;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+footer .footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .footer p {
+  text-align: center;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+footer .social-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .social-links a:hover {
+  color: #009cdc;
+}
+

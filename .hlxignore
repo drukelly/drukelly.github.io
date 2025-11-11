@@ -1,0 +1,12 @@
+*.md
+!README.md
+content/
+templates/
+src/
+requirements.txt
+.DS_Store
+node_modules/
+package-lock.json
+.vscode/
+.idea/
+

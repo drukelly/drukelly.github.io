@@ -1,0 +1,22 @@
+{
+  "project": "Dru Kelly",
+  "host": "drukelly.github.io",
+  "plugins": [
+    {
+      "id": "tools",
+      "title": "Tools",
+      "environments": ["edit"],
+      "url": "/tools/sidekick/tools.html",
+      "isPalette": true
+    },
+    {
+      "id": "library",
+      "title": "Library",
+      "environments": ["edit"],
+      "url": "https://main--drukelly-github-io--drukelly.hlx.page/tools/sidekick/library.html",
+      "isPalette": true,
+      "paletteRect": "top: 50px; bottom: 20px; left: 20px; right: 20px;"
+    }
+  ]
+}
+
