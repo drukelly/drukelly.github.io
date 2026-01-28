@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASO Keyword Manager</title>
+    <link rel="stylesheet" href="/css/aso-keywords.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>ASO Keyword Manager</h1>
+            <p class="subtitle">Enter keywords separated by commas. Duplicates are automatically grouped and counted.</p>
+            
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="keyword-input" 
+                    placeholder="Enter keywords (e.g., javascript, react, css)"
+                    autocomplete="off"
+                >
+                <p class="hint">Press Enter or type a comma to add keywords</p>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-value" id="unique-count">0</span>
+                    <span class="stat-label">Unique Keywords</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="total-count">0</span>
+                    <span class="stat-label">Total Entries</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="duplicate-count">0</span>
+                    <span class="stat-label">Duplicates Found</span>
+                </div>
+            </div>
+
+            <div class="keywords-section">
+                <h2>Keywords</h2>
+                <div class="sort-controls">
+                    <button class="sort-btn active" data-sort="order">Entry Order</button>
+                    <button class="sort-btn" data-sort="alpha">A-Z</button>
+                    <button class="sort-btn" data-sort="count">By Count</button>
+                </div>
+                <div class="keywords-container" id="keywords-container">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🏷️</div>
+                        <p>No keywords yet. Start typing above!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="word-frequency-section" id="word-frequency-section">
+                <h2>Word Frequency</h2>
+                <div class="min-count-filter">
+                    <label for="min-count">Show words appearing at least:</label>
+                    <select id="min-count">
+                        <option value="1">1 time</option>
+                        <option value="2" selected>2 times</option>
+                        <option value="3">3 times</option>
+                        <option value="5">5 times</option>
+                    </select>
+                </div>
+                <div class="word-list" id="word-list">
+                    <p class="word-frequency-empty">Add keywords to see word frequency analysis</p>
+                </div>
+            </div>
+
+            <button class="clear-btn" id="clear-btn">Clear All Keywords</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="js/aso-keywords.js"></script>
+</body>
+</html>
