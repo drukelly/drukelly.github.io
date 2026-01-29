@@ -130,6 +130,10 @@ main {
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
   position: relative;
+
+  & .inner-grid-item {
+    justify-content: flex-start;
+  }
   
   & p {
     margin-right: 160px;
@@ -237,7 +241,7 @@ footer {
   .about {
     p {
       margin-right: 0px;
-      padding-bottom: 80px;
+      padding-bottom: 100px;
     }
     img {
       max-width: 150px;
@@ -269,7 +273,7 @@ footer {
   .about {
     p {
       margin-right: 0;
-      padding-bottom: 70px;
+      padding-bottom: 100px;
     }
     & img {
       display: block;
