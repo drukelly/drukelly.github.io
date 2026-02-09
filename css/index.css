@@ -218,6 +218,92 @@ footer {
   color: rgba(0, 0, 0, 0.67);
   padding-left: var(--padding);
   padding-bottom: env(safe-area-inset-bottom);
+  text-align: center;
+}
+
+.footer-fine-print {
+  font-size: 0.8rem;
+  grid-column: 1 / -1;
+  margin: 0.5em 0 0;
+  opacity: 0.85;
+}
+
+.footer-fine-print__link {
+  background: none;
+  border: none;
+  color: var(--color-hyperlink);
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.footer-fine-print__link:hover {
+  color: var(--color-hyperlink-hover);
+}
+
+/* Cookie consent banner */
+.cookie-consent {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--color-dark-brown);
+  bottom: 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  left: 0;
+  padding: 1rem calc(var(--padding) + env(safe-area-inset-left)) calc(1rem + env(safe-area-inset-bottom)) calc(var(--padding) + env(safe-area-inset-right));
+  position: fixed;
+  right: 0;
+  z-index: 1000;
+}
+
+.cookie-consent p {
+  font-size: var(--font-size-md);
+  margin-bottom: 1rem;
+  max-width: 60ch;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cookie-consent .button {
+  background-color: transparent;
+  border: 2px solid var(--color-dark);
+  border-radius: 4px;
+  color: inherit;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  padding: var(--padding-button);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cookie-consent .button:hover {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.cookie-consent .button--secondary {
+  border-color: rgba(0, 0, 0, 0.4);
+  opacity: 0.9;
+}
+
+.cookie-consent .button--secondary:hover {
+  border-color: var(--color-dark);
+  opacity: 1;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Tablet Responsive Grid */
@@ -292,9 +378,5 @@ footer {
   .socials {
     grid-column: 1;
     grid-row: auto;
-  }
-
-  footer {
-    text-align: center;
   }
 }

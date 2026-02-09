@@ -15,6 +15,15 @@
 </head>
 
 <body>
+  <div id="cookie-consent" class="cookie-consent" role="dialog" aria-labelledby="cookie-consent-heading" aria-describedby="cookie-consent-desc" hidden>
+    <h2 id="cookie-consent-heading" class="visually-hidden">Cookie consent</h2>
+    <p id="cookie-consent-desc">This site uses cookies via Google Analytics to understand how visitors use the site. Choose your preference below.</p>
+    <div class="cookie-consent__actions">
+      <button type="button" id="cookie-consent-accept" class="button">Accept</button>
+      <button type="button" id="cookie-consent-reject" class="button button--secondary">Reject</button>
+    </div>
+  </div>
+
   <div class="css-grid-container">
     <header class="grid-item about">
       <div class="inner-grid-item">
@@ -94,13 +103,13 @@
         </div>
       </aside>
 
-      <!-- Scripts -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V7LBDDE0S"></script>
+      <!-- Scripts: GA loads only after consent -->
       <script src="/js/index.js"></script>
     </main>
 
     <footer>
-      <small>&copy; 2025 Dru Kelly. All rights reserved.</small>
+      <p class="footer-fine-print" id="cookie-copyright-text">&copy; 2025 Dru Kelly. All rights reserved.<br />
+      This site uses cookies via <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Google Analytics</a> to understand how visitors use the site. <button type="button" id="cookie-preferences" class="footer-fine-print__link">Cookie preferences</button></p>
     </footer>
   </div>
 </body>
