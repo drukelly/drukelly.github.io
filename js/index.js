@@ -31,10 +31,13 @@
     document.head.appendChild(script);
   }
 
+  var BODY_CONSENT_CLASS = 'cookie-consent-visible';
+
   function showBanner() {
     var banner = document.getElementById('cookie-consent');
     if (banner) {
       banner.hidden = false;
+      document.body.classList.add(BODY_CONSENT_CLASS);
     }
   }
 
@@ -42,6 +45,7 @@
     var banner = document.getElementById('cookie-consent');
     if (banner) {
       banner.hidden = true;
+      document.body.classList.remove(BODY_CONSENT_CLASS);
     }
   }
 

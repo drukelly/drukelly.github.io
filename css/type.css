@@ -2,6 +2,8 @@
     /* Base font size */
     --font-size-base: 12px;
 
+    --font-size-xs: calc(var(--font-size-base) * 0.66);
+
     /* Scale using a ratio of 1.25 (major third) */
     --font-size-sm: calc(var(--font-size-base) * 0.8);
     /* 0.8rem */
@@ -31,4 +33,8 @@
 
 h1, h2, h3 {
     margin-bottom: .33rem;
+}
+
+footer {
+    font-size: var(--font-size-xs);
 }
